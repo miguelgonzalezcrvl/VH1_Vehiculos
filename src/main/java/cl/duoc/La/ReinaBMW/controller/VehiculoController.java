@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-a
 
 @RestController
 @RequestMapping("/api/vehiculos")
@@ -25,7 +24,7 @@ public class VehiculoController {
         Vehiculo v = service.save(vehiculo);
 
         return ResponseEntity.ok(
-                new ApiResponse<>(200, "Vehículo creado", v)
+                new ApiResponse<>(200, "Vehiculo creado", v)
         );
     }
 
@@ -35,7 +34,7 @@ public class VehiculoController {
         List<Vehiculo> lista = service.findAll();
 
         return ResponseEntity.ok(
-                new ApiResponse<>(200, "Listado de vehículos", lista)
+                new ApiResponse<>(200, "Listado de vehiculos", lista)
         );
     }
 
@@ -45,7 +44,7 @@ public class VehiculoController {
         Vehiculo v = service.vender(id);
 
         return ResponseEntity.ok(
-                new ApiResponse<>(200, "Vehículo vendido", v)
+                new ApiResponse<>(200, "Vehiculo vendido", v)
         );
     }
 
